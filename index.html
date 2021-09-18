@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="./asstes/styles/styles.css">
+	<title>Radio Zappa</title>
+</head>
+
+<body>
+	<div class="container" id="container">
+		<div class="header">
+			<header>
+				<div class="logo-menu">
+					<div class="logo">
+						<h1>Zappa Radio</h1>
+					</div>
+					<div class="menu">
+						<span class="burguer"></span>
+					</div>
+				</div>
+				<div class="nav">
+					<nav>
+						<ul>
+							<li><a href="#">Nada por aquí</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+
+		<div class="main" id="main">
+			<div class="texto">
+				<h1>Bienvenido a <span>Zappa Radio</span></h1>
+				<h2>¡Bien adentro tuyo!</h2>
+			</div>
+			<div class="flecha">
+				<a href="#footer"><i class="fas fa-arrow-down"></i></a>
+			</div>
+		</div>
+
+		<div class="player" id="player">
+			<div class="fondo-a"></div>
+			<div class="cancion">
+				<div class="escribir" id="cancion-artista">
+				</div>
+			</div>
+			<div class="play" id="play"><i class="fas fa-play"></i></div>
+			<div class="stop" id="stop"><i class="fas fa-stop"></i></div>
+			<div class="volumen"><input id="volumen" type="range" value="50"></div>
+			<div class="fondo-b">
+				<div class="programa-en-vivo">
+					<h2>Programa en vivo</h2>
+					<div class="escribir" id="programa-en-vivo-escribir">
+					</div>
+				</div>
+				<div class="lista-de-canciones">
+					<h2>Últimas canciones</h2>
+					<div class="escribir" id="lista-de-canciones-escribir">
+					</div>
+				</div>
+			</div>
+			<div class="lengueta" id="desplegar-lista"></div>
+		</div>
+
+		<div class="programacion">
+			<h1>Programación</h1>
+		</div>
+
+		<div class="dias" id="dias">
+			<ul id="ul_dias">
+				<li class="dia inactivo" id="0">Domingo</li>
+				<li class="dia inactivo" id="1">Lunes</li>
+				<li class="dia inactivo" id="2">Martes</li>
+				<li class="dia inactivo" id="3">Miércoles</li>
+				<li class="dia inactivo" id="4">Jueves</li>
+				<li class="dia inactivo" id="5">Viernes</li>
+				<li class="dia inactivo" id="6">Sábado</li>
+			</ul>
+		</div>
+
+		<div class="programas">
+			<div class="wrap" id="programas"></div>
+		</div>
+
+		<div class="clima-cotizacion" id="clima-cotizacion">
+			<div class="clima">
+				<div class="cuadro clima2">
+					<div class="imagen" id="tiempo-icon"></div>
+					<div class="datos" id="tiempo-datos"></div>
+				</div>
+			</div>
+			<div class="cotizacion-arg">
+				<div class="cuadro">
+					<div class="imagen" id="moneda-ARG"></div>
+					<div class="datos" id="cotizacion-datos-ARG"></div>
+				</div>
+			</div>
+			<div class="cotizacion-usd">
+				<div class="cuadro">
+					<div class="imagen" id="moneda-USD"></div>
+					<div class="datos" id="cotizacion-datos-USD"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer" id="footer">
+			<div class="music">
+				<p><span class="musica"><i class="fas fa-copyright"></i></span><a href="#"> Rober</a></p>
+			</div>
+			<div class="design">
+				<p>Developed by Nazgul <span class="corazon"></span></p>
+			</div>
+			<div class="disclamer">
+				<span class="advertencia" id="disclaimer"><i class="fas fa-exclamation-circle"></i> Disclaimer</span>
+			</div>
+
+			<div class="audio">
+				<audio controls id="audio" preload="" type="audio/mpeg">
+					<source src="http://one.cloudstreaming.eu:9090/stream">
+				</audio>
+			</div>
+
+		</div>
+	</div>
+	<div class="modals" id="modals" aria-hidden="true"></div>
+
+	<div class="modal-disclaimer" id="modal-disclaimer" aria-hidden="true">
+		<div class="modal-contenido-disclaimer" id="modal-contenido-disclaimer">
+			<span class="cerrar" id="cerrar-disclaimer">&times;</span>
+			<p>Este sitio web, la edición, locución, grabación, dirección y puesta en aire está hecha por personas que
+				no son "Zappa". Al igual que "el Colo", no queremos tener quilombos legales.</p>
+		</div>
+	</div>
+
+	<script src="./asstes/js/index.js"></script>
+</body>
+
+</html>
